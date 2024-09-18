@@ -12,10 +12,10 @@ const Footer = () => {
             <Image src='/icons/enest.png' alt="Logo" width={220} height={44} className="mr-2" />
             <span className='my-4 text-center md:text-left text-gray-600 text-sm'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </span>
           </div>
-          <div className="mb-8 mt-4 md:mb-4">
+          <div className="flex flex-col items-center mb-8 mt-4 md:mb-4 sm:items-start">
             <h3 className="text-lg font-semibold">Contact with us</h3>
-            <p className='text-sm my-2 text-gray-600'>Email</p>
-            <p className='text-sm text-gray-600'>Talk to a Councellor </p>
+            <a href="#" className='text-sm my-2 text-gray-600 hover:text-blue-600'>Email</a>
+            <a href="#" className='text-sm text-gray-600 hover:text-blue-600'>Talk to a Councellor </a>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         {/* Third Column */}
-        <div className="md:col-span-1 flex flex-col justify-between items-center">
+        <div className="md:col-span-1 flex flex-col justify-between items-start pl-8">
           <div className="mb-8 md:mb-4">
             <h3 className="text-lg font-semibold mb-4">Incubated by</h3>
             <Image src='/icons/msme.png' alt="Government MSME" width={147} height={64} className="mt-3" />
@@ -51,9 +51,9 @@ const Footer = () => {
       </div>
     
 
-      <div className='flex justify-between md:px-14 pb-8 lg:px-18 lg:pb-8'>
+      <div className='flex flex-col gap-y-9  sm:flex-row justify-between px-8 pb-8 md:px-14 lg:px-18'>
         <div className="">
-            <h3 className="text-lg font-semibold text-purple-600 mb-2">Let's get social:</h3>
+            <h3 className="text-lg font-semibold text-purple-600 mb-2">Let&apos;s get social:</h3>
             <div className='flex gap-x-2 mt-5'>
               <Image src='/icons/insta.png' alt="insta" width={25} height={25} className="" />
               <Image src='/icons/yt.png' alt="insta" width={25} height={25} className="" />
@@ -65,10 +65,10 @@ const Footer = () => {
         </div>
         <div className="flex space-x-4 items-center ">
             <a href="#">
-              <Image src='/icons/playstore.png' alt="Google Play" width={275} height={79}className="" />
+              <Image src='/icons/playstore.png' alt="Google Play" width={275} height={79} className="w-30 sm:w-36 md:w-48 lg:w-[275px] h-auto"  />
             </a>
             <a href="#">
-              <Image src='/icons/appstore.png' alt="App Store" width={275} height={79}className="" />
+              <Image src='/icons/appstore.png' alt="App Store" width={275} height={79} className="w-30 sm:w-36 md:w-48 lg:w-[275px] h-auto"  />
             </a>
         </div>
       </div>

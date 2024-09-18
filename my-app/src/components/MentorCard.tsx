@@ -18,7 +18,7 @@ function MentorCard({ data }: MentorCardProps) {
         
       </CardHeader>
         {data.topVoice && (
-          <div className="absolute top-4 left-4 px-3 py-2 bg-zinc-500/20 rounded-2xl flex items-center gap-2">
+          <div className="absolute top-3 left-3 px-3 py-2 bg-zinc-500/20 rounded-2xl flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="12"

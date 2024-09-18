@@ -31,7 +31,7 @@ const Mentor = () => {
           </div>
         </div>
       </div>
-      <div className='space-y-6 mr-8'>
+      <div className='space-y-6  flex flex-col items-center'>
         <div className='flex justify-center'>
           <Image
             src='/icons/mentor.png'
