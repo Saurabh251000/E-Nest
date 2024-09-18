@@ -9,7 +9,21 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());  
+
+const corsOptions = {
+  origin: process.env.FRONTEND_URI || '*', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+  credentials: true,
+};
+app.use(cors(corsOptions));
+
+// app.use(cors()); 
+
+// app.use((err, req, res, next) => {
+//   console.error(err.stack);
+//   res.status(500).send('Something went wrong!');
+// });
+
 
 connectDB();
 
