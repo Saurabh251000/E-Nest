@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "../components/ui/card";
 
 import BookNow from './BookNow';
 
@@ -21,7 +21,7 @@ interface CourseProps {
 }
 
 function Course({ name, duration, price, discount, bookingPrice, color }: CourseProps) {
-  // console.log(color)
+  console.log(color)
   return (
     <Card className={`bg-white rounded-[20px] py-5 col-span-1`}>
       <CardHeader>

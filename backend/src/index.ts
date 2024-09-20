@@ -1,29 +1,39 @@
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db';
 import mentorRoutes from './routes/mentorRoutes';
 import bookingRoutes from './routes/bookingRoutes';
-import cors from 'cors'; // Import cors
+import cors, { CorsOptions } from 'cors';
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 
-const corsOptions = {
-  origin: process.env.FRONTEND_URI || '*', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+// Define allowed origins
+const allowedOrigins = ['http://localhost:5003', process.env.FRONTEND_URI || ''];
+
+const corsOptions: CorsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
+
+
 app.use(cors(corsOptions));
 
-// app.use(cors()); 
 
-// app.use((err, req, res, next) => {
-//   console.error(err.stack);
-//   res.status(500).send('Something went wrong!');
-// });
-
+// Sample error handler middleware (optional)
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  console.error(err.message);
+  res.status(500).send('Internal Server Error');
+});
 
 connectDB();
 

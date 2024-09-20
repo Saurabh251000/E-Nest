@@ -1,5 +1,6 @@
+'use client'
 import React from 'react';
-import { AboutText }  from '@/data'
+import { AboutText }  from '../data'
 
 
 const About = () => {

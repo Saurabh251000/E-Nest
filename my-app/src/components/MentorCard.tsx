@@ -3,18 +3,18 @@ import React from 'react';
 import Image from 'next/image'; 
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { Button } from "./ui/button";
-import { TopMentor } from '@/types/interface';
+import { TopMentor } from '../types/interface';
 
 interface MentorCardProps {
   data: TopMentor;
 }
 
 function MentorCard({ data }: MentorCardProps) {
-  console.log(data.color);
+  // console.log(data.color);
   
   return (
     <Card className="bg-white shadow-md w-full relative col-span-1 flex flex-col mx-auto items-center rounded-2xl overflow-hidden">
-      <CardHeader className={`absolute w-[320px] h-40  bg-[#F5C6C9] ${data.color}  rounded-b-[100px]  md:rounded-b-[120px] flex items-center justify-center`}> 
+      <CardHeader className={`absolute w-[320px] h-40   ${data.color}  rounded-b-[100px]  md:rounded-b-[120px] flex items-center justify-center`}> 
         
       </CardHeader>
         {data.topVoice && (

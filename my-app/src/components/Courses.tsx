@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Course from './Course'
-import { coursesData } from '@/data'
+import { coursesData } from '../data'
 
 function Courses() {
   return (

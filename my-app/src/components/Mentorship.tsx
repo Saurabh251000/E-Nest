@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react'
 import MentorCard from './MentorCard'
 // import { topMentorsData }  from '@/data'
-import { TopMentor } from '@/types/interface'
+import { TopMentor } from '../types/interface'
 
 
 function Mentorship() {
@@ -11,9 +11,9 @@ function Mentorship() {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/mentors');  // GET request to API
+        const response = await fetch('http://localhost:5000/api/mentors', { credentials: 'include' });   // GET request to API
         const data = await response.json();
-        console.log("data",data);
+        // console.log("data",data);
         
         setMentors(data);  // Set mentors data from API
       } catch (error) {

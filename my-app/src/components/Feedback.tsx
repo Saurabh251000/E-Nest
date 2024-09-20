@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { MentorshipFeedback } from '@/data'
+import { MentorshipFeedback } from '../data'
 import FeedBackCard from './FeedBackCard';
 
 const Feedback = () => {
