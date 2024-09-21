@@ -1,5 +1,5 @@
 // import Image from 'next/image';
-import { MentorData, Feedback, TopMentor, CourseType } from './types/interface';
+import { MentorData, Feedback, CourseType } from './types/interface';
 
 // Mentor Data
 export const mentorData: MentorData = {
@@ -60,6 +60,38 @@ export const MentorshipFeedback: Feedback[] = [
   
 ];
 
+
+// Courses Data
+export const coursesData: CourseType[] = [
+  {
+    name: "Agiculture",
+    duration: 45,
+    price: 1000,
+    discount: 40,
+    bookingPrice: 600,
+    color: '#f8bbd0',
+  },
+  {
+    name: "Career Mentorship",
+    duration: 45,
+    price: 1000,
+    discount: 40,
+    bookingPrice: 600,
+    color: '#DFECB4',
+    
+  },
+  {
+    name: "Reasearch",
+    duration: 45,
+    price: 1000,
+    discount: 40,
+    bookingPrice: 600,
+    color: '#CCEBE9',
+  },
+];
+
+
+
 // Top Mentors Data
 // export const topMentorsData: TopMentor[] = [
 //   {
@@ -95,32 +127,3 @@ export const MentorshipFeedback: Feedback[] = [
 //     color: 'bg-[#F5C6C9]', 
 //   },
 // ];
-
-// Courses Data
-export const coursesData: CourseType[] = [
-  {
-    name: "Agiculture",
-    duration: 45,
-    price: 1000,
-    discount: 40,
-    bookingPrice: 600,
-    color: 'bg-pink-200',
-  },
-  {
-    name: "Career Mentorship",
-    duration: 45,
-    price: 1000,
-    discount: 40,
-    bookingPrice: 600,
-    color: 'bg-[#DFECB4]',
-    
-  },
-  {
-    name: "Reasearch",
-    duration: 45,
-    price: 1000,
-    discount: 40,
-    bookingPrice: 600,
-    color: 'bg-[#CCEBE9]',
-  },
-];

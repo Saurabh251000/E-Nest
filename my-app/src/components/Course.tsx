@@ -21,19 +21,20 @@ interface CourseProps {
 }
 
 function Course({ name, duration, price, discount, bookingPrice, color }: CourseProps) {
-  console.log(color)
+  console.log(color);
   return (
-    <Card className={`bg-white rounded-[20px] py-5 col-span-1`}>
+    <Card className="bg-white rounded-[20px] py-5 col-span-1">
       <CardHeader>
         <CardTitle>{name}</CardTitle>
         <CardDescription>Duration {duration} min</CardDescription>
       </CardHeader>
-      <CardContent className='flex items-center space-x-2'>
-        <span className='text-gray-500 line-through'>₹{price}</span> {/* Crossed original price */}
-        <span className='text-green-600'>{discount}% off</span> 
+      <CardContent className="flex items-center space-x-2">
+        <span className="text-gray-500 line-through">₹{price}</span> {/* Crossed original price */}
+        <span className="text-green-600">{discount}% off</span> 
       </CardContent>
-      <CardFooter  className={` flex justify-between  ${color} mx-5 my-3 p-2 rounded-full`}>
-        <BookNow bookingPrice={bookingPrice}/>
+      {/* Apply the color as an inline style */}
+      <CardFooter style={{ backgroundColor: color }} className="flex justify-between mx-5 my-3 p-2 rounded-full">
+        <BookNow bookingPrice={bookingPrice} />
       </CardFooter>
     </Card>
   );

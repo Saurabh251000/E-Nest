@@ -11,7 +11,10 @@ function Mentorship() {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/mentors', { credentials: 'include' });   // GET request to API
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URI}/api/mentors`, {
+          credentials: 'include',
+        });
+         // GET request to API
         const data = await response.json();
         // console.log("data",data);
         

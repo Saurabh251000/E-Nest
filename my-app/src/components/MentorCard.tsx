@@ -14,7 +14,7 @@ function MentorCard({ data }: MentorCardProps) {
   
   return (
     <Card className="bg-white shadow-md w-full relative col-span-1 flex flex-col mx-auto items-center rounded-2xl overflow-hidden">
-      <CardHeader className={`absolute w-[320px] h-40   ${data.color}  rounded-b-[100px]  md:rounded-b-[120px] flex items-center justify-center`}> 
+      <CardHeader  style={{ backgroundColor: data.color }} className={`absolute w-[320px] h-40  rounded-b-[100px]  md:rounded-b-[120px] flex items-center justify-center`}> 
         
       </CardHeader>
         {data.topVoice && (
