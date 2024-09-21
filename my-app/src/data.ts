@@ -81,7 +81,7 @@ export const coursesData: CourseType[] = [
     
   },
   {
-    name: "Reasearch",
+    name: "Research",
     duration: 45,
     price: 1000,
     discount: 40,

@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Menu for MD and above */}
-        <NavigationMenu className={`${menuOpen ? 'absolute top-0 -left-5 flex bg-white p-6' : 'hidden'} w-full flex-col  sm:w-auto sm:flex  sm:flex-row sm:items-center`}>
+        <NavigationMenu className={`${menuOpen ? 'absolute top-full -left-5 flex bg-white p-6 transition duration-300' : 'hidden'} w-full flex-col  sm:w-auto sm:flex  sm:flex-row sm:items-center`}>
           <NavigationMenuList className="relative w-full flex flex-col  items-start sm:flex-row gap-4 sm:gap-8 sm:items-center">
             <NavigationMenuItem >
               <NavigationMenuLink asChild>
